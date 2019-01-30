@@ -9,3 +9,8 @@ An [Object.fromEntries](https://github.com/tc39/proposal-object-from-entries#obj
   * CJS via `const fromEntries = require('@ungap/from-entries')`
 
 Compatible with every browser.
+
+## Looking for 100% Spec Compliance?
+
+Then I'll suggest [this polyfill](https://www.npmjs.com/package/object.fromentries) too.
+
