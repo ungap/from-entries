@@ -29,10 +29,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ungap/is-array.git"
+    "url": "git+https://github.com/ungap/from-entries.git"
   },
   "bugs": {
-    "url": "https://github.com/ungap/is-array/issues"
+    "url": "https://github.com/ungap/from-entries/issues"
   },
-  "homepage": "https://github.com/ungap/is-array#readme"
+  "homepage": "https://github.com/ungap/from-entries#readme"
 }
