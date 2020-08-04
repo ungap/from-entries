@@ -21,6 +21,11 @@ function test() {
     JSON.stringify({a: 1, b: 2}),
     'same JSON outcome'
   );
+  console.assert(
+    JSON.stringify(fromEntries([['a', 1], ['b', 2]])) ===
+    JSON.stringify({a: 1, b: 2}),
+    'same JSON outcome'
+  );
   try {
     fromEntries('nope');
     console.assert(false, 'non-iterable should fail');

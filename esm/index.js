@@ -1,5 +1,7 @@
 var fromEntries = Object.fromEntries || function fromEntries(iterable) {
-  var entries = ('entries' in iterable ? iterable.entries() : iterable);
+  var entries = Array.isArray(iterable) ?
+    createEntries(iterable) :
+    ('entries' in iterable ? iterable.entries() : iterable);
   var object = {};
   var entry;
   while ((entry = entries.next()) && !entry.done) {
@@ -13,4 +15,17 @@ var fromEntries = Object.fromEntries || function fromEntries(iterable) {
   }
   return object;
 };
+
+function createEntries(array) {
+  var i = -1;
+  return {
+    next: function () {
+      var done = array.length <= ++i;
+      return {
+        done: done,
+        value: done ? void 0 : array[i]
+      };
+    }
+  };
+}
 export default fromEntries;
